@@ -19,3 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->post('/user/{id}', '\App\Http\Controllers\UserController@update');
+
+Route::middleware('auth:sanctum')->post('/convert', '\App\Http\Controllers\ConversionController@convert');
+Route::middleware('auth:sanctum')->get('/convert/history/{limit}', '\App\Http\Controllers\ConversionController@history');
