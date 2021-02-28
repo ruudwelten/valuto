@@ -1,0 +1,8 @@
+@use '../color';
+@use '../font';
+
+.info {
+    background-color: color.$background-blue;
+    border-left: 4px solid color.$blue;
+    font-weight: font.$regular;
+}

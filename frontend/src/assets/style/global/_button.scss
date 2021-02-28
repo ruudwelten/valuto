@@ -1,0 +1,87 @@
+@use '../color';
+@use '../font';
+
+$skew: .5rem;
+
+a.button,
+button,
+input[type=submit] {
+    position: relative;
+
+    border: 0;
+    border-radius: 0;
+    padding: .4rem 1.2rem;
+    margin: 0 $skew;
+    height: 2.2rem;
+    vertical-align: baseline;
+
+    font-size: .8rem;
+    font-family: font.$open-sans;
+    font-weight: font.$semi-bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+    background: color.$orange;
+
+    cursor: pointer;
+    overflow: show;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: color.$orange-light;
+        text-decoration: none;
+
+        &::before {
+            border-bottom-color: color.$orange-light;
+        }
+        &::after {
+            border-top-color: color.$orange-light;
+        }
+    }
+
+    &:active {
+        outline: none;
+        transform: translate(1px, 1px);
+    }
+
+    &[disabled] {
+        opacity: .3;
+
+        &:hover {
+            cursor: default;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+
+        display: block;
+        width: 0;
+        height: 2.2rem;
+    }
+    &::before {
+        left: -$skew;
+        border-left: $skew solid transparent;
+        border-bottom: 2.2rem solid color.$orange;
+    }
+    &::after {
+        right: -$skew;
+        border-right: $skew solid transparent;
+        border-top: 2.2rem solid color.$orange;
+    }
+}
+
+a.button {
+    display: inline-flex;
+    align-items: center;
+
+    &::selection {
+        background: transparent;
+    }
+}

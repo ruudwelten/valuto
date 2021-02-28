@@ -1,0 +1,11 @@
+@use '../color';
+@use '../spacing';
+
+.card {
+    display: block;
+    padding: spacing.$global-padding;
+    background: color.$background;
+}
+.card--small {
+    padding: spacing.$global-padding-small;
+}

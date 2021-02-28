@@ -1,0 +1,58 @@
+@use '../breakpoint';
+
+#app {
+    display: grid;
+
+    grid-template-rows: 7rem auto 2rem 1fr 4rem;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+    grid-template-areas:
+        ". header header ."
+        ". nav nav ."
+        ". . . ."
+        ". main main side"
+        ". . . .";
+
+    @media (min-width: breakpoint.$mini-small) {
+        grid-template-rows: 1rem 7rem 2rem 2rem 1fr 4rem;
+        grid-template-columns: 4rem 1fr 1fr 4rem;
+        grid-template-areas:
+            ". . . ."
+            ". header header ."
+            ". nav nav ."
+            ". . . ."
+            ". main main side"
+            ". . . .";
+    }
+
+    @media (min-width: breakpoint.$small-medium) {
+        grid-template-rows: 4rem 8rem 2rem 1fr 4rem;
+        grid-template-columns: 4rem 1fr 1fr 4rem;
+        grid-template-areas:
+            ". . . ."
+            ". header nav ."
+            ". . . ."
+            ". main main side"
+            ". . . .";
+    }
+
+    @media (min-width: breakpoint.$medium-large) {
+        grid-template-rows: 6rem 8rem 2rem 1fr 6rem;
+        grid-template-columns: 1fr 36rem 36rem 1fr;
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: side;
+}

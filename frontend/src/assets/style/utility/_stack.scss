@@ -1,0 +1,13 @@
+@use '../spacing';
+
+.stack {
+    & > * + * {
+        margin-top: spacing.$stack-gap;
+    }
+}
+
+.stack-large {
+    & > * + * {
+        margin-top: spacing.$stack-gap * 2;
+    }
+}

@@ -1,0 +1,8 @@
+@use '../color';
+@use '../font';
+
+.success {
+    background-color: color.$background-green;
+    border-left: 4px solid color.$green;
+    font-weight: font.$regular;
+}

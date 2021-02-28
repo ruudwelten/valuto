@@ -1,0 +1,30 @@
+@use '../breakpoint';
+@use '../color';
+
+body {
+
+    background:
+        linear-gradient(
+            174deg,
+            color.$background-gray,
+            color.$background-gray 12%,
+            color.$background 12%,
+            color.$background 90%,
+            color.$background-orange 90%,
+            color.$background-orange
+        )
+        fixed;
+
+    @media (min-width: breakpoint.$small-medium) {
+        background:
+            linear-gradient(
+                102.82deg,
+                color.$background-gray,
+                color.$background-gray 9%,
+                color.$background 9%,
+                color.$background 87%,
+                color.$background-orange 87%,
+                color.$background-orange
+            );
+    }
+}

@@ -1,0 +1,38 @@
+@use '../breakpoint';
+@use '../color';
+@use '../font';
+
+nav {
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: column;
+    text-align: center;
+
+    & > * + * {
+        margin-top: .5rem;
+    }
+
+    a {
+        text-transform: lowercase;
+
+        &.router-link-active {
+            color: color.$text;
+            font-weight: font.$regular;
+        }
+
+        &::selection {
+            background: color.$orange;
+        }
+    }
+
+    @media (min-width: breakpoint.$tiny-mini) {
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+
+        & > * + * {
+            margin-top: 0;
+            margin-left: 2rem;
+        }
+    }
+}

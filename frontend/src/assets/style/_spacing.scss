@@ -1,0 +1,7 @@
+/* Linear interpolation between 24rem and 38rem @16px */
+$global-padding: clamp(1rem, -0.7143rem + 7.1429vw, 2rem);
+$global-padding-small: clamp(0.5rem, -0.3571rem + 3.5714vw, 1rem);
+
+$header-height: clamp(4rem, 0.5714rem + 14.2857vw, 6rem);
+
+$stack-gap: 1rem;

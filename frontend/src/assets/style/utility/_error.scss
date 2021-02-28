@@ -1,0 +1,8 @@
+@use '../color';
+@use '../font';
+
+.error {
+    background-color: color.$background-red;
+    border-left: 4px solid color.$red;
+    font-weight: font.$regular;
+}
