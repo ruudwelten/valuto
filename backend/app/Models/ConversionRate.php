@@ -18,13 +18,6 @@ class ConversionRate extends Model
         'date',
     ];
 
-    // private CurrencyService $currencyService;
-    //
-    // public function __construct(CurrencyService $currencyService)
-    // {
-    //     $this->currencyService = $currencyService;
-    // }
-
     public static function boot(): void
     {
         parent::boot();
